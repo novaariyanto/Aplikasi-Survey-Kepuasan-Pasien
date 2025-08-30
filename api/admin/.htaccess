@@ -1,0 +1,10 @@
+Options -Indexes
+
+# Jika seseorang mencoba akses folder tanpa file, arahkan ke halaman 403 atau index
+DirectoryIndex index.php
+
+# (Opsional) Cegah akses langsung ke file sensitif seperti .env, .htaccess
+<FilesMatch "^(\.env|\.htaccess|config\.php)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
